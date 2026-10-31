@@ -1,0 +1,324 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>METHEE | Portfolio</title>
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #101010;
+  color: #fff;
+  font-family: Arial, sans-serif;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 8%;
+  position: sticky;
+  top: 0;
+  background: rgba(16,16,16,.95);
+  z-index: 10;
+  border-bottom: 1px solid #292929;
+}
+
+.logo {
+  font-size: 25px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+nav a {
+  color: #aaa;
+  text-decoration: none;
+  margin-left: 25px;
+  font-size: 13px;
+}
+
+nav a:hover {
+  color: white;
+}
+
+.hero {
+  min-height: 570px;
+  padding: 130px 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.tag {
+  color: #aaa;
+  letter-spacing: 4px;
+  font-size: 12px;
+  margin-bottom: 25px;
+}
+
+.hero h1 {
+  font-size: clamp(45px, 8vw, 95px);
+  line-height: 1.05;
+  letter-spacing: -3px;
+}
+
+.hero h1 span {
+  color: #888;
+}
+
+.hero p {
+  color: #aaa;
+  margin-top: 25px;
+  line-height: 1.8;
+  max-width: 480px;
+}
+
+.btn {
+  display: inline-block;
+  border: 1px solid #777;
+  padding: 14px 25px;
+  color: white;
+  text-decoration: none;
+  margin-top: 30px;
+  width: fit-content;
+  transition: .3s;
+}
+
+.btn:hover {
+  background: white;
+  color: black;
+}
+
+section {
+  padding: 85px 10%;
+}
+
+.section-title {
+  font-size: 35px;
+  margin-bottom: 12px;
+}
+
+.subtitle {
+  color: #888;
+  margin-bottom: 35px;
+}
+
+.works {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+}
+
+.project {
+  background: #1c1c1c;
+  overflow: hidden;
+}
+
+.project-image {
+  height: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg,#292929,#111);
+  color: #777;
+  font-size: 14px;
+  transition: .4s;
+}
+
+.project:hover .project-image {
+  background: linear-gradient(135deg,#444,#222);
+}
+
+.project-info {
+  padding: 20px;
+}
+
+.project-info h3 {
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.project-info p {
+  color: #888;
+  font-size: 13px;
+}
+
+.about-text {
+  max-width: 650px;
+  color: #aaa;
+  line-height: 2;
+  margin-top: 20px;
+}
+
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 25px;
+}
+
+.skills span {
+  border: 1px solid #444;
+  padding: 12px 18px;
+  color: #ccc;
+  font-size: 13px;
+}
+
+.contact {
+  background: #191919;
+}
+
+.contact a {
+  color: white;
+}
+
+footer {
+  padding: 30px;
+  text-align: center;
+  color: #666;
+  font-size: 12px;
+}
+
+@media(max-width: 650px) {
+  nav {
+    padding: 20px 5%;
+    flex-wrap: wrap;
+    gap: 18px;
+  }
+
+  nav a {
+    margin-left: 0;
+    margin-right: 13px;
+    font-size: 11px;
+  }
+
+  .hero {
+    min-height: 480px;
+    padding: 90px 7%;
+  }
+
+  .hero h1 {
+    letter-spacing: -2px;
+  }
+
+  section {
+    padding: 65px 7%;
+  }
+
+  .works {
+    grid-template-columns: 1fr;
+  }
+
+  .project-image {
+    height: 210px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+  <div class="logo">METHEE.</div>
+  <div>
+    <a href="#home">HOME</a>
+    <a href="#works">WORKS</a>
+    <a href="#about">ABOUT</a>
+    <a href="#contact">CONTACT</a>
+  </div>
+</nav>
+
+<header class="hero" id="home">
+  <div class="tag">FILM & DIGITAL MEDIA PORTFOLIO</div>
+  <h1>CREATING<br><span>VISUAL STORIES.</span></h1>
+  <p>
+    Hello, I'm Methee. A video editor and filmmaker
+    passionate about storytelling through moving images.
+  </p>
+  <a href="#works" class="btn">EXPLORE MY WORKS ↗</a>
+</header>
+
+<section id="works">
+  <h2 class="section-title">SELECTED WORKS.</h2>
+  <p class="subtitle">A collection of my creative projects.</p>
+
+  <div class="works">
+
+    <div class="project">
+      <div class="project-image">PROJECT 01</div>
+      <div class="project-info">
+        <h3>Short Film</h3>
+        <p>Film Editing / Color Grading</p>
+      </div>
+    </div>
+
+    <div class="project">
+      <div class="project-image">PROJECT 02</div>
+      <div class="project-info">
+        <h3>Commercial</h3>
+        <p>Video Editing / Production</p>
+      </div>
+    </div>
+
+    <div class="project">
+      <div class="project-image">PROJECT 03</div>
+      <div class="project-info">
+        <h3>Documentary</h3>
+        <p>Editing / Camera Assistant</p>
+      </div>
+    </div>
+
+    <div class="project">
+      <div class="project-image">PROJECT 04</div>
+      <div class="project-info">
+        <h3>Creative Works</h3>
+        <p>Graphics / Post Production</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section id="about">
+  <h2 class="section-title">ABOUT ME.</h2>
+  <p class="about-text">
+    My name is Methee Thaijai.
+    I am a Film and Digital Media student
+    with 3 years of video editing experience.
+    I enjoy creating visual stories and
+    developing ideas through filmmaking.
+  </p>
+
+  <div class="skills">
+    <span>Premiere Pro</span>
+    <span>After Effects</span>
+    <span>DaVinci Resolve</span>
+    <span>Video Editing</span>
+    <span>Color Grading</span>
+    <span>Graphics</span>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <h2 class="section-title">LET'S CONNECT.</h2>
+  <p class="subtitle">Have a project in mind? Get in touch.</p>
+  <p>Email: your-email@example.com</p>
+  <a href="mailto:your-email@example.com" class="btn">
+    CONTACT ME ↗
+  </a>
+</section>
+
+<footer>
+  © 2026 METHEE PORTFOLIO. ALL RIGHTS RESERVED.
+</footer>
+
+</body>
+</html>
