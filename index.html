@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="th">
 <head>
@@ -16,8 +15,8 @@
 
 body {
   font-family: Arial, sans-serif;
-  background: #f7f7f7;
-  color: #222;
+  background: #fafafa; /* พื้นหลังสีขาวนวลสะอาดตา */
+  color: #222222;
 }
 
 .sidebar {
@@ -116,7 +115,6 @@ p {
 }
 
 .info-grid,
-.work-grid,
 .skill-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -128,34 +126,59 @@ p {
   padding: 27px;
   border: 1px solid #eee;
   border-radius: 15px;
+  margin-bottom: 16px;
 }
 
 .card h3 {
   margin-bottom: 12px;
 }
 
-.work-cover {
-  height: 190px;
-  background: linear-gradient(135deg, #dedede, #f6f6f6);
+/* จัดสัดส่วนวิดีโอ YouTube ให้ responsive สวยงาม */
+.video-wrap {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /* อัตราส่วน 16:9 */
+  height: 0;
+  overflow: hidden;
   border-radius: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #777;
-  margin-bottom: 20px;
-  font-size: 13px;
-  letter-spacing: 2px;
+  background: #000;
+  margin-bottom: 15px;
+}
+
+.video-wrap iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
 }
 
 .work-card {
   background: white;
-  border: 1px solid #eee;
+  border: 1px solid #eaeaea;
   border-radius: 15px;
-  padding: 15px;
+  padding: 24px;
+  margin-bottom: 30px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
 }
 
 .work-card h3 {
-  margin-bottom: 8px;
+  margin-bottom: 6px;
+  font-size: 20px;
+  color: #111;
+}
+
+.work-card > p {
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+.card-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+  margin: 0;
 }
 
 .skill {
@@ -164,11 +187,13 @@ p {
   padding: 20px;
   border-radius: 12px;
   font-weight: bold;
+  text-align: center;
 }
 
 .contact {
   background: white;
   padding: 35px;
+  border: 1px solid #eee;
   border-radius: 15px;
 }
 
@@ -216,14 +241,13 @@ footer {
   }
 
   .info-grid,
-  .work-grid,
   .skill-grid {
     grid-template-columns: 1fr;
   }
 
   h1 {
     font-size: 48px;
-}
+  }
 }
 </style>
 </head>
@@ -290,139 +314,132 @@ footer {
   <p>ผลงานวิดีโอและโปรเจกต์ที่ผมเคยสร้างสรรค์</p>
   <br>
 
- <!-- หมวดหมู่: ผลงานภาพยนตร์สั้น (Short Film) -->
-<div class="work-card">
-  <h3>Short Film Portfolio</h3>
-  <p>ผลงานกผลิตภาพยนตร์สั้น</p>
-  
-  <!-- 1. ROGUE -->
-  <div class="card">
-    <div class="video-wrap">
-      <iframe src="https://www.youtube.com/embed/RwduGFZhNs8" loading="lazy" allowfullscreen></iframe>
-    </div>
-    <div class="card-info">
-      <h3 class="card-title">ROGUE | Short Film</h3>
-    </div>
-  </div>
-
-  <!-- 2. กเฬวร -->
-  <div class="card">
-    <div class="video-wrap">
-      <iframe src="https://www.youtube.com/embed/0yNR26Kagog" loading="lazy" allowfullscreen></iframe>
-    </div>
-    <div class="card-info">
-      <h3 class="card-title">กเฬวร (The Sacrosanct) | Short Film</h3>
-    </div>
-  </div>
-
-  <!-- 3. Teaser - One day (กลับ)คนเก่า -->
-  <div class="card">
-    <div class="video-wrap">
-      <iframe src="https://www.youtube.com/embed/UwF-3HT5NLY" loading="lazy" allowfullscreen></iframe>
-    </div>
-    <div class="card-info">
-      <h3 class="card-title">Teaser - One day (กลับ)คนเก่า | Short Film</h3>
-    </div>
-  </div>
-
-  <!-- 4. คลิปหนังสั้นเพิ่มเติม (รหัส edzznwgIx8s) -->
-  <div class="card">
-    <div class="video-wrap">
-      <iframe src="https://www.youtube.com/embed/edzznwgIx8s" loading="lazy" allowfullscreen></iframe>
-    </div>
-    <div class="card-info">
-      <h3 class="card-title">ร้านชำในวันที่โลกเปลี่ยนไป</h3>
-    </div>
-  </div>
-
-  <!-- 5. คลิปหนังสั้นเพิ่มเติม (รหัส utjTLdnELic) -->
-  <div class="card">
-    <div class="video-wrap">
-      <iframe src="https://www.youtube.com/embed/utjTLdnELic" loading="lazy" allowfullscreen></iframe>
-    </div>
-    <div class="card-info">
-      <h3 class="card-title">โฆษณาโก๋เเก่ มัน  ทุกเม็ด มัน  เกินเพื่อน</h3>
-    </div>
-  </div>
-
-  <!-- 6. คลิปหนังสั้นล่าสุด (เพิ่มใหม่ - รหัส xfpc1YTGbbQ) -->
-  <div class="card">
-    <div class="video-wrap">
-      <iframe src="https://www.youtube.com/embed/xfpc1YTGbbQ" loading="lazy" allowfullscreen></iframe>
-    </div>
-    <div class="card-info">
-      <h3 class="card-title">ใคร…ในบ้าน</h3>
-    </div>
-  </div>
-</div>
-
-   <div class="work-card">
-  <h3>ผลงานตัดต่อวิดีโอช่องจอมข่าว</h3>
- <div class="card">
-  <div class="video-wrap">
-    <iframe src="https://www.youtube.com/embed/0__6pceOSOs" loading="lazy" allowfullscreen></iframe>
-  </div>
-  <div class="card-info">
-    <h3 class="card-title">ทายคำบนหัว My hero academia Ep.2</h3>
-  </div>
-</div>
-<div class="card">
-  <div class="video-wrap">
-    <iframe src="https://www.youtube.com/embed/UDbvFO8nS48" loading="lazy" allowfullscreen></iframe>
-  </div>
-  <div class="card-info">
-    <h3 class="card-title">Werewolf Ep.1 | บันทึกการแข่งขันบอร์ดเกม</h3>
-  </div>
-</div>
+  <!-- หมวดหมู่ 1: ผลงานภาพยนตร์สั้น (Short Film) -->
+  <div class="work-card">
+    <h3>Short Film Portfolio</h3>
+    <p>ผลงานผลิตภาพยนตร์สั้น</p>
+    
     <div class="card">
-  <div class="video-wrap">
-    <iframe src="https://www.youtube.com/embed/FUPK_0HibMY" loading="lazy" allowfullscreen></iframe>
-  </div>
-  <div class="card-info">
-    <h3 class="card-title">ทายหน้านักฟุตบอล คนไหนคือโรนัลโด้???</h3>
+      <div class="video-wrap">
+        <iframe src="https://www.youtube.com/embed/RwduGFZhNs8" loading="lazy" allowfullscreen></iframe>
+      </div>
+      <div class="card-info">
+        <h3 class="card-title">ROGUE | Short Film</h3>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="video-wrap">
+        <iframe src="https://www.youtube.com/embed/0yNR26Kagog" loading="lazy" allowfullscreen></iframe>
+      </div>
+      <div class="card-info">
+        <h3 class="card-title">กเฬวร (The Sacrosanct) | Short Film</h3>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="video-wrap">
+        <iframe src="https://www.youtube.com/embed/UwF-3HT5NLY" loading="lazy" allowfullscreen></iframe>
+      </div>
+      <div class="card-info">
+        <h3 class="card-title">Teaser - One day (กลับ)คนเก่า | Short Film</h3>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="video-wrap">
+        <iframe src="https://www.youtube.com/embed/edzznwgIx8s" loading="lazy" allowfullscreen></iframe>
+      </div>
+      <div class="card-info">
+        <h3 class="card-title">ร้านชำในวันที่โลกเปลี่ยนไป</h3>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="video-wrap">
+        <iframe src="https://www.youtube.com/embed/utjTLdnELic" loading="lazy" allowfullscreen></iframe>
+      </div>
+      <div class="card-info">
+        <h3 class="card-title">โฆษณาโก๋เเก่ มัน ทุกเม็ด มัน เกินเพื่อน</h3>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="video-wrap">
+        <iframe src="https://www.youtube.com/embed/xfpc1YTGbbQ" loading="lazy" allowfullscreen></iframe>
+      </div>
+      <div class="card-info">
+        <h3 class="card-title">ใคร…ในบ้าน</h3>
+      </div>
+    </div>
   </div>
 
-      
-     <div class="work-card">
-  <h3>ผลงานตัดต่อวิดีโอและรีวิวอุปกรณ์ไอที</h3>
- 
-  <!-- ผลงานที่ 3 -->
-  <div class="card">
-    <div class="video-wrap">
-      <iframe src="https://www.youtube.com/embed/zias5umj_GM" loading="lazy" allowfullscreen></iframe>
+  <!-- หมวดหมู่ 2: ผลงานตัดต่อวิดีโอช่องจอมข่าว -->
+  <div class="work-card">
+    <h3>ผลงานตัดต่อวิดีโอช่องจอมข่าว</h3>
+    <p>ผลงานรายการและคอนเทนต์จากช่องจอมข่าว</p>
+
+    <div class="card">
+      <div class="video-wrap">
+        <iframe src="https://www.youtube.com/embed/0__6pceOSOs" loading="lazy" allowfullscreen></iframe>
+      </div>
+      <div class="card-info">
+        <h3 class="card-title">ทายคำบนหัว My hero academia Ep.2</h3>
+      </div>
     </div>
-    <div class="card-info">
-      <h3 class="card-title">Glass Pad | Abyss Gaming Gear Veil Review</h3>
+
+    <div class="card">
+      <div class="video-wrap">
+        <iframe src="https://www.youtube.com/embed/UDbvFO8nS48" loading="lazy" allowfullscreen></iframe>
+      </div>
+      <div class="card-info">
+        <h3 class="card-title">Werewolf Ep.1 | บันทึกการแข่งขันบอร์ดเกม</h3>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="video-wrap">
+        <iframe src="https://www.youtube.com/embed/FUPK_0HibMY" loading="lazy" allowfullscreen></iframe>
+      </div>
+      <div class="card-info">
+        <h3 class="card-title">ทายหน้านักฟุตบอล คนไหนคือโรนัลโด้???</h3>
+      </div>
     </div>
   </div>
 
-  <!-- ผลงานที่ 4 -->
-  <div class="card">
-    <div class="video-wrap">
-      <iframe src="https://www.youtube.com/embed/xLJMv4ntrHg" loading="lazy" allowfullscreen></iframe>
+  <!-- หมวดหมู่ 3: ผลงานตัดต่อวิดีโอและรีวิวอุปกรณ์ไอที -->
+  <div class="work-card">
+    <h3>ผลงานตัดต่อวิดีโอและรีวิวอุปกรณ์ไอที</h3>
+    <p>รีวิวอุปกรณ์เกมมิ่งเกียร์และแกดเจ็ตต่างๆ</p>
+
+    <div class="card">
+      <div class="video-wrap">
+        <iframe src="https://www.youtube.com/embed/zias5umj_GM" loading="lazy" allowfullscreen></iframe>
+      </div>
+      <div class="card-info">
+        <h3 class="card-title">Glass Pad | Abyss Gaming Gear Veil Review</h3>
+      </div>
     </div>
-    <div class="card-info">
-      <h3 class="card-title">รีวิว EMEET SmartCam S600 | 4K Ultra HD Webcam</h3>
+
+    <div class="card">
+      <div class="video-wrap">
+        <iframe src="https://www.youtube.com/embed/xLJMv4ntrHg" loading="lazy" allowfullscreen></iframe>
+      </div>
+      <div class="card-info">
+        <h3 class="card-title">รีวิว EMEET SmartCam S600 | 4K Ultra HD Webcam</h3>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="video-wrap">
+        <iframe src="https://www.youtube.com/embed/EINLOaOZxZA" loading="lazy" allowfullscreen></iframe>
+      </div>
+      <div class="card-info">
+        <h3 class="card-title">Glass Pad | Monica Gaming Feng Nica Review</h3>
+      </div>
     </div>
   </div>
 
-  <!-- ผลงานที่ 5 -->
-  <div class="card">
-    <div class="video-wrap">
-      <iframe src="https://www.youtube.com/embed/EINLOaOZxZA" loading="lazy" allowfullscreen></iframe>
-    </div>
-    <div class="card-info">
-      <h3 class="card-title">Glass Pad | Monica Gaming Feng Nica Review</h3>
-    </div>
-  </div>
-
-
-    <div class="work-card">
-      <div class="work-cover">PROJECT 04</div>
-      <h3>Creative Media</h3>
-      <p>ผลงานสื่อสร้างสรรค์และดิจิทัลคอนเทนต์</p>
-    </div>
-  </div>
 </section>
 
 <section id="skills">
@@ -437,6 +454,7 @@ footer {
     <div class="skill">Visual Storytelling</div>
   </div>
 </section>
+
 <section id="contact">
   <div class="tag">04 / GET IN TOUCH</div>
   <div class="contact">
@@ -446,8 +464,8 @@ footer {
       สามารถติดต่อผมได้ผ่านช่องทางด้านล่าง
     </p>
     <br>
-    <p>Gmali:methithati@gmail.com </p>
-    <p>Phone number:088-650-3447 </p>
+    <p><strong>Email:</strong> methithati@gmail.com</p>
+    <p><strong>Phone Number:</strong> 088-650-3447</p>
   </div>
 </section>
 
