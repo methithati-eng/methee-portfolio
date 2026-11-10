@@ -19,7 +19,7 @@ body {
   color: #222222;
 }
 
-/* ปรับเมนูมาไว้ด้านบนสุด (Top Navigation) */
+/* เมนูด้านบนสุด (Top Navigation) */
 header {
   position: fixed;
   top: 0;
@@ -66,7 +66,6 @@ header {
   font-weight: bold;
 }
 
-/* ปรับระยะห่าง Main Content เนื่องจากย้ายเมนูไปข้างบน */
 .main {
   max-width: 1200px;
   margin: 0 auto;
@@ -125,11 +124,17 @@ p {
   font-size: 14px;
 }
 
-.info-grid,
-.skill-grid {
+.info-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 18px;
+}
+
+/* ปรับ Skill Grid ให้เป็น 3 คอลัมน์สำหรับรูปสกิล */
+.skill-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
 }
 
 .card {
@@ -187,14 +192,40 @@ p {
   margin: 0;
 }
 
-.skill {
+/* สไตล์สำหรับการแสดงผลรูปภาพ Skills */
+.skill-card {
   background: white;
   border: 1px solid #eaeaea;
-  padding: 18px;
-  border-radius: 10px;
-  font-weight: 600;
+  border-radius: 12px;
+  overflow: hidden;
   text-align: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+  transition: transform 0.2s ease;
+}
+
+.skill-card:hover {
+  transform: translateY(-4px);
+}
+
+.skill-img-wrap {
+  width: 100%;
+  height: 150px;
+  background: #f0f0f0;
+  overflow: hidden;
+}
+
+.skill-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.skill-card h3 {
   font-size: 14px;
+  font-weight: 600;
+  color: #333;
+  padding: 14px;
+  margin: 0;
 }
 
 .contact {
@@ -430,7 +461,7 @@ footer {
 
     <div class="card">
       <div class="video-wrap">
-        <iframe src="https://www.youtube.com/embed/EINLOaOZxZA" layout="lazy" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/EINLOaOZxZA" loading="lazy" allowfullscreen></iframe>
       </div>
       <div class="card-info">
         <h3 class="card-title">Glass Pad | Monica Gaming Feng Nica Review</h3>
@@ -440,13 +471,13 @@ footer {
 
 </section>
 
-<!-- ส่วน My Skills ที่ปรับเป็นใส่รูปภาพตามหัวข้อ -->
+<!-- ส่วน My Skills ที่ใช้รูปภาพผลงานจริง -->
 <section id="skills">
   <div class="tag">03 / WHAT I DO</div>
   <h2>My Skills.</h2>
   <div class="skill-grid">
     
-    <!-- หัวข้อที่ 1: Adobe Premiere Pro -->
+    <!-- 1. Adobe Premiere Pro -->
     <div class="skill-card">
       <div class="skill-img-wrap">
         <img src="images/premiere.jpg" alt="Adobe Premiere Pro">
@@ -454,15 +485,15 @@ footer {
       <h3>Adobe Premiere Pro</h3>
     </div>
 
-    <!-- หัวข้อที่ 2: DaVinci Resolve -->
+    <!-- 2. DaVinci Resolve (ใช้ภาพหน้าจอ DaVinci ของคุณ) -->
     <div class="skill-card">
       <div class="skill-img-wrap">
-        <img src="images/davinci.jpg" alt="DaVinci Resolve">
+        <img src="images/davinci-work.jpg" alt="DaVinci Resolve">
       </div>
       <h3>DaVinci Resolve</h3>
     </div>
 
-    <!-- หัวข้อที่ 3: Color Grading -->
+    <!-- 3. Color Grading -->
     <div class="skill-card">
       <div class="skill-img-wrap">
         <img src="images/colorgrading.jpg" alt="Color Grading">
