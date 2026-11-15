@@ -190,6 +190,27 @@ p {
   margin: 0;
 }
 
+/* สไตล์ปุ่มลิงก์ TikTok */
+.tiktok-link-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: #111111;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 500;
+  margin-top: 10px;
+  transition: all 0.2s ease;
+}
+
+.tiktok-link-btn:hover {
+  background: #333333;
+  transform: translateY(-2px);
+}
+
 .skill-card {
   background: white;
   border: 1px solid #eaeaea;
@@ -373,6 +394,30 @@ footer {
   <p>ผลงานวิดีโอและโปรเจกต์ที่ผมเคยสร้างสรรค์</p>
   <br>
 
+  <!-- หมวด Music Video & Cover MV -->
+  <div class="work-card">
+    <h3>Music Video & Cover MV Portfolio</h3>
+    <p>ผลงานมิวสิกวิดีโอและคัฟเวอร์เพลง</p>
+    
+    <div class="card">
+      <div class="video-wrap">
+        <iframe src="https://www.youtube.com/embed/_LyL6EIB8GA" loading="lazy" allowfullscreen></iframe>
+      </div>
+      <div class="card-info">
+        <h3 class="card-title">FOREVER - BABYMONSTER | COVER</h3>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="video-wrap">
+        <iframe src="https://www.youtube.com/embed/aUWfqErptxQ" loading="lazy" allowfullscreen></iframe>
+      </div>
+      <div class="card-info">
+        <h3 class="card-title">Mirrr - ดอกไม้ไฟ (Firework) cover music video I NEXUS Production</h3>
+      </div>
+    </div>
+  </div>
+
   <div class="work-card">
     <h3>Short Film Portfolio</h3>
     <p>ผลงานผลิตภาพยนตร์สั้น</p>
@@ -435,6 +480,14 @@ footer {
   <div class="work-card">
     <h3>ผลงานตัดต่อวิดีโอช่องจอมข่าว</h3>
     <p>ผลงานรายการและคอนเทนต์จากช่องจอมข่าว</p>
+
+    <div class="card">
+      <h3 class="card-title">ช่องจอมข่าว | TikTok Content</h3>
+      <p style="font-size: 13px; color: #666; margin-top: 4px;">คลิปวิดีโอสั้นจากช่องจอมข่าว</p>
+      <a href="https://vt.tiktok.com/ZSpqKcJTV/" target="_blank" class="tiktok-link-btn">
+        <span>🎵 รับชมคลิปบน TikTok ↗</span>
+      </a>
+    </div>
 
     <div class="card">
       <div class="video-wrap">
@@ -503,26 +556,30 @@ footer {
   <h2>My Skills.</h2>
   <div class="skill-grid">
     
-   <!-- ส่วน My Skills ที่ใช้รูปภาพผลงานจริง -->
-<section id="skills">
-  <div class="tag">03 / WHAT I DO</div>
-  <h2>My Skills.</h2>
-  <div class="skill-grid">
-    
+    <!-- Adobe Premiere Pro -->
     <div class="skill-card">
       <div class="skill-img-wrap">
-        <img src="images/premiere.jpg" alt="Adobe Premiere Pro">
+        <img src="ภาพหน้าจอ (155).png" alt="Adobe Premiere Pro">
       </div>
       <h3>Adobe Premiere Pro</h3>
     </div>
 
+    <!-- DaVinci Resolve -->
     <div class="skill-card">
       <div class="skill-img-wrap">
-        <img src="images/davinci-work.jpg" alt="DaVinci Resolve">
+        <img src="ภาพหน้าจอ (145).png" alt="DaVinci Resolve">
       </div>
       <h3>DaVinci Resolve</h3>
     </div>
-    
+
+    <!-- Color Grading -->
+    <div class="skill-card">
+      <div class="skill-img-wrap">
+        <img src="ภาพหน้าจอ (147).png" alt="Color Grading">
+      </div>
+      <h3>Color Grading</h3>
+    </div>
+
   </div>
 </section>
 
@@ -535,18 +592,17 @@ footer {
       สามารถติดต่อผมได้ผ่านช่องทางด้านล่าง
     </p>
     
-    <!-- กลุ่มปุ่มกดติดต่อสไตล์ Minimal -->
     <div class="contact-buttons">
       <a href="mailto:methithati@gmail.com" class="contact-btn">
         <span class="icon">✉</span>
         <span>methithati@gmail.com</span>
       </a>
-     
+      
       <a href="https://line.me/ti/p/7Y2D7NwMp0" target="_blank" class="contact-btn">
         <span class="icon">💬</span>
         <span>LINE: Add Friend</span>
       </a>
-      
+
       <a href="tel:0886503447" class="contact-btn">
         <span class="icon">📞</span>
         <span>088-650-3447</span>
